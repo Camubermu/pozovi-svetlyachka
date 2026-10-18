@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ru">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Позови светлячка</title>
+<title>Llama a la luciérnaga</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%}
@@ -373,7 +373,7 @@ button:focus-visible{outline:4px solid #fff;outline-offset:2px}
   <div id="prog"></div>
   <div id="lua"><svg class="hi" viewBox="0 0 100 110"><rect x="12" y="8" width="64" height="62" rx="5" fill="#8b94a0" stroke="#222" stroke-width="5"/><rect x="22" y="18" width="44" height="40" fill="#0e1a14"/><rect x="31" y="28" width="9" height="11" fill="#5dff8a"/><rect x="50" y="28" width="9" height="11" fill="#5dff8a"/><rect x="32" y="45" width="26" height="5" fill="#5dff8a"/></svg><div id="luat"></div></div>
   <div id="ctl">
-    <button id="run"><svg class="ic"><use href="#i-play"/></svg>Запустить</button>
+    <button id="run"><svg class="ic"><use href="#i-play"/></svg>Ejecutar</button>
     <button id="show"><svg class="ic"><use href="#i-eye"/></svg><span data-t="show"></span></button>
     <button id="next" hidden><svg class="ic"><use href="#i-next"/></svg><span data-t="next"></span></button>
   </div>
@@ -461,7 +461,7 @@ var colls=[],bgf=[];
 var done=[false,false,false,false,false],wins=0,cur=0,progs=null,chorusMode=false,cardState=null,tourDone=false,bonusUnlocked=false,bonusOpen=false,lvTok=0,hintOn=false;
 var CH_HUE=[60,185,305],RING=[0,2,4,6,8,9],homesC=[[.17,.36],[.33,.26],[.12,.5]];
 var CH_START=[P(3,'on',1,'off',1),P(2,'on',1,'off',2),P(2,'on',2,'off',1)];var RM=false;try{RM=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
-var T=window.T;var LANGS=['RU','EN','ES','ID','IT','TR','PL','PT','AR'];var lang='EN';
+var T=window.T;var LANGS=['ES','EN','RU','ID','IT','TR','PL','PT','AR'];var lang='ES';
 function t(k){return(T[lang]&&T[lang][k])||T.EN[k]||k}
 var lastSay=null;
 
@@ -896,7 +896,7 @@ function setLang(code){
   if(lastSay)say(lastSay[0],lastSay[1],lastSay[2]);
   fit()}
 $('#langBar').addEventListener('click',function(e){var b=e.target.closest('[data-l]');if(b)setLang(b.dataset.l)});
-setLang('EN');loadLevel(0);requestAnimationFrame(ambient);
+setLang('ES');loadLevel(0);requestAnimationFrame(ambient);
 window.__game={done:function(){return done.slice()},go:function(n){loadLevel(n)},card:function(){return cardState},bonus:function(){bonusUnlocked=true;bonusBtn();openBonus()},bfs:function(){return bfs},setLang:setLang,LV:LV,get prog(){return prog},set prog(p){prog=p;render()},get lvl(){return lvl},judge:judge,build:build,segs:segs};
 })();
 </script>
